@@ -25,7 +25,7 @@ void loop() {
   strip.clear();
 
   currentColor = readColorControlPins();
-  // Set the first 4 LEDs to red
+  // Set the NeoPixel LED color 
   for(int i=0; i<LED_COUNT; i++) {
     strip.setPixelColor(i, currentColor); 
   }
