@@ -9,6 +9,7 @@ The NeoPixel LED strip contains the following wires:
 * Green (x1): Data Input (DIN). This is the signal wire for the LEDs.
 
 
+
 ## Nano V3.0
 
 We're using a Nano V3.0 as the Arduino microcontroller and mounting the Nano board to a Nano Terminal Adapter v1.0. 
@@ -22,9 +23,20 @@ For testing during code development, we'll provide power with the USB connection
 * Green Wire (DIN): Connect the green wire to the D2 terminal. This will be the digital pin used
      to send data to the LEDs.
 
+### Wiring with roboRio
 
-## TODO
-* Add a Capacitor: Place a large capacitor (1000µF, 6.3V or higher) across the 5V and GND terminals. 
-* Add a Resistor: Connect a 300-500 Ohm resistor in series with the Green (Data) wire before it
-     connects to the D2 terminal. This resistor helps protect the first NeoPixel from voltage
-     spikes on the data line.
+**NeoPixel to VRM**
+
+* Red NeoPixel wire to VRM 5V/2A
+* White NeoPixel wire to VRM 5V/2A GND
+
+**NeoPixel to Nano V3.0**
+* Red NeoPixel wire to Nano +5V terminal
+* White NeoPixel wire to Nano GND terminal
+* Green NeoPixel wire to Nano D2 terminal
+
+**roboRio to Nano V3.0**
+* Orange: roboRio DIO 0 signal pin to Nano D4 terminal
+* Yellow: roboRio DIO 1 signal pin to Nano D6 terminal
+* Black: roboRio DIO 0 GND pin to Nano GND terminal
+
